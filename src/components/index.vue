@@ -10,10 +10,7 @@
         :default-active="activeIndex2"
         class="el-menu-demo"
         mode="horizontal"
-        @select="handleSelect"
-        background-color="#545c64"
-        text-color="#fff"
-        active-text-color="#ffd04b">
+        @select="handleSelect">
         <el-menu-item index="1">系统</el-menu-item>
         <el-submenu index="2">
           <template slot="title">数据产品</template>
@@ -28,21 +25,21 @@
 
     <el-main>
       <el-row :gutter="20">
-        <el-col :span="6">
-          <el-card :body-style="{ padding: '10px' }" shadow="hover">
+        <el-col :span="4">
+          <el-card :body-style="{ padding: '10px',height: '300px' }" shadow="hover">
             <img src="../../image/fc.png" class="image">
             <div style="padding: 14px;">
               <span>风场</span>
               <div class="bottom clearfix">
                 <time class="time">{{ currentDate }}</time>
-                <el-button type="text" class="button">操作按钮</el-button>
               </div>
             </div>
+            <el-button class="button" style="width:100%;height:70px">操作按钮</el-button>
           </el-card>
         </el-col>
-        <el-col :span="6">
-          <el-card :body-style="{ padding: '10px' }" shadow="hover">
-            <img src="../../image/jg.png" class="image">
+        <el-col :span="4">
+          <el-card :body-style="{ padding: '10px',height: '300px' }" shadow="hover">
+            <img src="../../image/nav.png" class="image">
             <div style="padding: 14px;">
               <span>全球气象导航</span>
               <div class="bottom clearfix">
@@ -52,9 +49,12 @@
             </div>
           </el-card>
         </el-col>
-        <el-col :span="6">
-          <el-card :body-style="{ padding: '10px' }" shadow="hover">
-            <img src="../../image/jg.png" class="image">
+        <el-col :span="4">
+          <el-card :body-style="{ padding: '10px',height: '450px' }" shadow="hover">
+            <div>
+            <img src="../../image/jg.svg" class="image"> 
+            </div>
+
             <div style="padding: 14px;">
               <span>交管</span>
               <div class="bottom clearfix">
@@ -64,9 +64,9 @@
             </div>
           </el-card>
         </el-col>
-        <el-col :span="6">
-          <el-card :body-style="{ padding: '10px' }" shadow="hover">
-            <img src="../../image/grafana_icon.svg" class="image">
+        <el-col :span="4">
+          <el-card :body-style="{ padding: '10px',height: '450px' }" shadow="hover">
+            <img src="../../image/scc.svg" class="image">
             <div style="padding: 14px;">
               <span>集群监控</span>
               <div class="bottom clearfix">
